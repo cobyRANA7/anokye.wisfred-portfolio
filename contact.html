@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Building Engineer & Architect</title>
+    <meta name="description" content="Get in touch with our professional building engineer and architect. Free consultations available for your architectural and engineering projects.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Wisfred's Building Consult</a>
+                
+                <div class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Get Quote</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+
+            <div class="nav-mobile" id="mobileMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="contact.html" class="btn btn-primary btn-sm">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 5rem;">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="contact-hero-content animate-fade-in">
+                    <h1 class="section-title">Get In Touch</h1>
+                    <p class="section-subtitle">
+                        Ready to start your next project? Let's discuss how our architectural and 
+                        engineering expertise can bring your vision to life.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section animate-slide-up">
+                        <h2 class="form-title">Send us a Message</h2>
+                        <p class="form-subtitle">
+                            Fill out the form below and we'll get back to you within 24 hours.
+                        </p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="projectType">Project Type</label>
+                                <select id="projectType" name="projectType">
+                                    <option value="">Select a project type</option>
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                    <option value="industrial">Industrial</option>
+                                    <option value="renovation">Renovation</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Budget Range</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select a budget range(Dollars&Cedis)</option>
+                                    <option value="under-100k">Under $100K</option>
+                                    <option value="100k-500k">$100K - $500K</option>
+                                    <option value="500k-1m">$500K - $1M</option>
+                                    <option value="1m-5m">$1M - $5M</option>
+                                    <option value="over-5m">Over $5M</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Project Description *</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                    placeholder="Please describe your project, timeline, and any specific requirements..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Send Message <i data-lucide="send"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info-section animate-fade-in">
+                        <h2 class="info-title">Contact Information</h2>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h3>Phone</h3>
+                                    <p><a href="tel:+233(0)548749728">+233(0)548749728</a></p>
+                                    <span>Mon - Fri, 9:00 AM - 6:00 PM</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h3>Email</h3>
+                                    <p><a href="anokye.wisfred22@gmail.com">anokye.wisfred22@gmail.com</a></p>
+                                    <span>We respond within 24 hours</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h3>Office Address</h3>
+                                    <p>Ghana, Ashanti Region<br>Kumasi, Municipality</p>
+                                    <span>By appointment only</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i data-lucide="clock"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h3>Business Hours</h3>
+                                    <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                       Saturday: 10:00 AM - 2:00 PM<br>
+                                       Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="consultation-cta">
+                            <h3>Free Consultation</h3>
+                            <p>
+                                Schedule a free 30-minute consultation to discuss your project requirements 
+                                and get expert advice on your architectural and engineering needs.
+                            </p>
+                            <a href="tel:+233(0)548749728" class="btn btn-accent">
+                                <i data-lucide="calendar"></i>
+                                Schedule Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">
+                        Get quick answers to common questions about our services and process.
+                    </p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item animate-slide-up">
+                        <h3 class="faq-question">What services do you offer?</h3>
+                        <p class="faq-answer">
+                            We provide comprehensive architectural design, structural engineering, project management, 
+                            and construction supervision services for residential, commercial, and industrial projects.
+                        </p>
+                    </div>
+                    
+                    <div class="faq-item animate-slide-up" style="animation-delay: 0.1s;">
+                        <h3 class="faq-question">How long does a typical project take?</h3>
+                        <p class="faq-answer">
+                            Project timelines vary based on scope and complexity. Residential projects typically take 
+                            3-8 months, while commercial projects can range from 6-18 months from design to completion.
+                        </p>
+                    </div>
+                    
+                    <div class="faq-item animate-slide-up" style="animation-delay: 0.2s;">
+                        <h3 class="faq-question">Do you handle permits and approvals?</h3>
+                        <p class="faq-answer">
+                            Yes, we assist with all necessary permits, building code compliance, zoning approvals, 
+                            and regulatory submissions to ensure your project meets all requirements.
+                        </p>
+                    </div>
+                    
+                    <div class="faq-item animate-slide-up" style="animation-delay: 0.3s;">
+                        <h3 class="faq-question">What is your fee structure?</h3>
+                        <p class="faq-answer">
+                            Our fees are project-based and depend on scope, complexity, and timeline. We provide 
+                            detailed proposals after our initial consultation and project assessment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-company">
+                    <a href="index.html" class="footer-logo">Wisfred's Building Consult</a>
+                    <p class="footer-description">
+                        Professional Building Engineer & Architect delivering innovative design solutions 
+                        and structural excellence for over a decade.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/Anokye Wisfred" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://instagram.com/nanayaw_wisfred" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/Nana Yaw Wisfred" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <nav>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-detail">
+                            <i data-lucide="phone"></i>
+                            <a href="tel:+233(0)548749728">+233(0)548749728</a>
+                        </div>
+                        <div class="contact-detail">
+                            <i data-lucide="mail"></i>
+                            <a href="anokye.wisfred22@gmail.com">anokye.wisfred22@gmail.com</a>
+                        </div>
+                        <div class="contact-detail">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <p>Ghana, Ashanti Region</p>
+                                <p>Kumasi, Metropolitan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wisfred's Building Consult. All rights reserved. | Professional Building Engineer & Architect</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    
+    <style>
+        .contact-hero {
+            padding: 5rem 0;
+            background: var(--gradient-subtle);
+            text-align: center;
+        }
+        
+        .contact-content {
+            padding: 5rem 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .form-title, .info-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--foreground);
+            margin-bottom: 1rem;
+        }
+        
+        .form-subtitle {
+            color: var(--muted-foreground);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-form {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--foreground);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: calc(var(--radius) - 2px);
+            background: var(--background);
+            color: var(--foreground);
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--ring);
+            box-shadow: 0 0 0 2px hsl(var(--ring), 0.2);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .contact-info-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-card);
+            height: fit-content;
+        }
+        
+        .contact-methods {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .contact-method:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .method-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--accent-soft);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+        
+        .method-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--foreground);
+            margin-bottom: 0.25rem;
+        }
+        
+        .method-content p {
+            color: var(--foreground);
+            margin-bottom: 0.25rem;
+        }
+        
+        .method-content a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .method-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .method-content span {
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+        }
+        
+        .consultation-cta {
+            background: var(--gradient-subtle);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+        
+        .consultation-cta h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--foreground);
+            margin-bottom: 0.5rem;
+        }
+        
+        .consultation-cta p {
+            color: var(--muted-foreground);
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        .faq-section {
+            padding: 5rem 0;
+            background: var(--gradient-subtle);
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .faq-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-card);
+        }
+        
+        .faq-question {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--foreground);
+            margin-bottom: 0.75rem;
+        }
+        
+        .faq-answer {
+            color: var(--muted-foreground);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form,
+            .contact-info-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>

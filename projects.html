@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+
+  <!-- Lightbox for Images -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #ff7f50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Filter Buttons */
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .filter-buttons button {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 20px;
+      background: #ddd;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .filter-buttons button.active,
+    .filter-buttons button:hover {
+      background: #ff7f50;
+      color: white;
+    }
+
+    /* Portfolio Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 0 20px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .project-card {
+      position: relative;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .project-card p {
+      padding: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Video Play Button Overlay */
+    .video-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+    .video-overlay:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    .video-overlay svg {
+      width: 36px;
+      height: 36px;
+      fill: white;
+    }
+
+    /* Modal */
+    .video-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .video-modal-content {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      aspect-ratio: 16/9;
+      background: black;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .video-modal iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .close-video {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      padding: 5px 10px;
+      transition: background 0.3s ease;
+    }
+    .close-video:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    /* Return Button */
+    .return-container {
+      text-align: center;
+      margin: 20px 0 50px;
+    }
+    .return-btn {
+      display: inline-block;
+      background-color: #ff7f50;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+    .return-btn:hover {
+      background-color: #e65c00;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<header>🏗️ My Projects</header>
+
+<!-- Filter Buttons -->
+<div class="filter-buttons">
+  <button class="active" onclick="filterProjects('all')">All</button>
+  <button onclick="filterProjects('3d')">3D Designs</button>
+  <button onclick="filterProjects('ongoing')">Ongoing Projects</button>
+  <button onclick="filterProjects('completed')">Completed Projects</button>
+  <button onclick="filterProjects('video')">Videos</button>
+</div>
+
+<!-- Return Button -->
+<div class="return-container">
+  <a href="portfolio.html" class="return-btn">⬅ Back to Portfolio</a>
+</div>
+
+<!-- Portfolio Grid -->
+<div class="gallery" id="projectGallery">
+  <!-- 3D Project -->
+  <div class="project-card" data-category="3d">
+    <a href="assets\3D-design-cropped-800x500.jpg", data-lightbox="projects" data-title="Modern 3D House Design">
+      <img src="assets\3D-design-cropped-800x500.jpg" alt="3D Design"><br><br>
+      <a href="assets\3D2.jpg" data-lightbox="projects" data-title="Modern 3D House Design">
+      <img src="assets\3D2.jpg" alt="3D Design"><br><br>
+       <a href="assets\3D-design1.jpg" data-lightbox="projects" data-title="Modern 3D House Design">
+      <img src="assets\3D-design1.jpg" alt="3D Design"><br><br>
+      <a href="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=500&fit=crop" data-lightbox="projects" data-title="Modern 3D House Design">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=500&fit=cro" alt="3D Design">
+    </a>
+    </a>
+    <p>Modern 3D House Design</p>
+  </div>
+
+  <!-- Ongoing Project -->
+  <div class="project-card" data-category="ongoing">
+    <a href="assets\on-site-supervision.jpg" data-lightbox="projects" data-title="On-site Construction Progress">
+      <img src="assets\on-site-supervision.jpg" alt="Ongoing Project"><br><br>
+      <a href="assets\on-site-supervision3.jpg" data-lightbox="projects" data-title="On-site Construction Progress">
+      <img src="assets\on-site-supervision3.jpg" alt="Ongoing Project"><br><br>
+       <a href="assets\ongoing-project-supervision.jpg" data-lightbox="projects" data-title="On-site Construction Progress">
+      <img src="assets\ongoing-project-supervision.jpg" alt="Ongoing Project"><br><br>
+       <a href="assets\installation of wood carcasses.jpg" data-lightbox="projects" data-title="On-site Construction Progress">
+      <img src="assets\installation of wood carcasses.jpg" alt="Ongoing Project">
+    </a>
+    <p>On-site Project Supervision</p>
+  </div>
+
+  <!-- Completed Project -->
+  <div class="project-card" data-category="completed">
+    <a href="assets\project2.jpg" data-lightbox="projects" data-title="Completed Project">
+      <img src="assets\project2.jpg" alt="Completed Project"><br><br>
+       <a href="assets\roofing1.jpg" data-lightbox="projects" data-title="On-site Construction Progress">
+      <img src="assets\roofing1.jpg" alt="Ongoing Project"><br><br>
+       <a href="assets\project2b.jpg" data-lightbox="projects" data-title="Completed Project">
+      <img src="assets\project2b.jpg" alt="Completed Project"><br><br>
+      <a href="assets\installation of wood carcasses2.jpg" data-lightbox="projects" data-title="Completed Project">
+      <img src="assets\installation of wood carcasses2.jpg" alt="Completed Project"><br><br>
+      <a href="assets\Building Project.jpg" data-lightbox="projects" data-title="Completed Project">
+      <img src="assets\Building Project.jpg" alt="Completed Project">
+    </a>
+    <p>Completed Project</p>
+  </div>
+
+  <!-- Video Project 1 -->
+  <div class="project-card" data-category="video">
+   <a href="assets\project-superrvision.mp4" data-lightbox="video" data-title="Project Walkthrough Video">
+      <img src="assets\steel-roofing.jpg" alt="Video Project"><br><br>
+      <a href="assets\roof-install-supervision.mp4" data-lightbox="video" data-title="Project Walkthrough Video">
+      <img src="assets\metal-roof.jpg" alt="Video Project"><br><br>
+      <a href="assets\Live-AutoCAD-DesignWork.mp4" data-lightbox="video" data-title="Project Walkthrough Video">
+      <img src="assets\live design.jpg" alt="Video Project"><br><br>
+      <a href="assets\on-going-project3.mp4" data-lightbox="video" data-title="Project Walkthrough Video">
+      <img src="assets\on-site-supervision3.jpg" alt="Video Project"><br><br>
+       <a href="assets\Ironrods-installation(metaltraxx).mp4" data-lightbox="video" data-title="Project Walkthrough Video">
+      <img src="assets\iron-rods intallation.jpg" alt="Video Project"><br><br>
+      <a href="assets\land-escavation-leveling.mp4" data-lightbox="video" data-title="Project Walkthrough Video">
+      <img src="assets\escavator-leveling.webp" alt="Video Project"><br><br>
+      <div class="video-overlay">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </div>
+    </a>
+    <p>Project Walkthrough Video</p>
+  </div>
+</div>
+
+<!-- Single Video Modal -->
+<div id="videoModal" class="video-modal">
+  <div class="video-modal-content">
+    <span class="close-video" onclick="closeVideo()">&times;</span>
+    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+  // Filter Logic
+  function filterProjects(category) {
+    const cards = document.querySelectorAll('.project-card');
+    const buttons = document.querySelectorAll('.filter-buttons button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    cards.forEach(card => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Video Modal Logic (Single Modal for All Videos)
+  const videoTriggers = document.querySelectorAll('.video-trigger');
+  const videoModal = document.getElementById('videoModal');
+  const videoFrame = document.getElementById('videoFrame');
+
+  videoTriggers.forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      const videoUrl = this.getAttribute('data-video');
+      videoFrame.src = videoUrl;
+      videoModal.style.display = 'flex';
+    });
+  });
+
+  function closeVideo() {
+    videoFrame.src = ''; // stop video
+    videoModal.style.display = 'none';
+  }
+
+  window.addEventListener('click', function(e) {
+    if (e.target === videoModal) closeVideo();
+  });
+</script>
+
+</body>
+</html>
