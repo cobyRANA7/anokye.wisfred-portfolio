@@ -73,63 +73,109 @@
                             Fill out the form below and we'll get back to you within 24 hours.
                         </p>
                         
-                       <form action="contact.php" method="POST" class="contact-form">
+                       <!-- ================= CONTACT FORM ================= -->
+<section id="contact" class="contact-section">
+  <h2>Request a Quote or Send a Message</h2>
+
+  <form action="contact.php" method="POST" class="contact-form">
     <div class="form-row">
-        <div class="form-group">
-            <label for="firstName">First Name *</label>
-            <input type="text" id="firstName" name="firstName" required>
-        </div>
-        <div class="form-group">
-            <label for="lastName">Last Name *</label>
-            <input type="text" id="lastName" name="lastName" required>
-        </div>
+      <div class="form-group">
+        <label for="firstName">First Name *</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name *</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
     </div>
-    
+
     <div class="form-row">
-        <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone">
-        </div>
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
     </div>
 
     <div class="form-group">
-        <label for="projectType">Project Type</label>
-        <select id="projectType" name="projectType">
-            <option value="">Select a project type</option>
-            <option value="residential">Residential</option>
-            <option value="commercial">Commercial</option>
-            <option value="industrial">Industrial</option>
-            <option value="renovation">Renovation</option>
-            <option value="consultation">Consultation</option>
-            <option value="other">Other</option>
-        </select>
+      <label for="projectType">Project Type</label>
+      <select id="projectType" name="projectType">
+        <option value="">Select a project type</option>
+        <option value="residential">Residential</option>
+        <option value="commercial">Commercial</option>
+        <option value="industrial">Industrial</option>
+        <option value="renovation">Renovation</option>
+        <option value="consultation">Consultation</option>
+        <option value="other">Other</option>
+      </select>
     </div>
-    
+
     <div class="form-group">
-        <label for="budget">Budget Range</label>
-        <select id="budget" name="budget">
-            <option value="">Select a budget range (Dollars & Cedis)</option>
-            <option value="under-100k">Under $100K</option>
-            <option value="100k-500k">$100K - $500K</option>
-            <option value="500k-1m">$500K - $1M</option>
-            <option value="1m-5m">$1M - $5M</option>
-            <option value="over-5m">Over $5M</option>
-        </select>
+      <label for="budget">Budget Range</label>
+      <select id="budget" name="budget">
+        <option value="">Select a budget range</option>
+        <option value="under-100k">Under $100K</option>
+        <option value="100k-500k">$100K - $500K</option>
+        <option value="500k-1m">$500K - $1M</option>
+        <option value="1m-5m">$1M - $5M</option>
+        <option value="over-5m">Over $5M</option>
+      </select>
     </div>
-    
+
     <div class="form-group">
-        <label for="message">Project Description *</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Please describe your project, timeline, and any specific requirements..."></textarea>
+      <label for="message">Project Description *</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Please describe your project..."></textarea>
     </div>
-    
+
     <button type="submit" class="btn btn-primary btn-lg">
-        Send Message <i data-lucide="send"></i>
+      Send Message <i data-lucide="send"></i>
     </button>
-</form>
+  </form>
+</section> 
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/233548749728?text=Hello%20Wisfred!%20I%27d%20like%20to%20discuss%20a%20project."
+   class="whatsapp-float"
+   target="_blank"
+   title="Chat on WhatsApp">
+   <i data-lucide="message-circle"></i>
+</a>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+<style>
+  /* Floating WhatsApp Button Style */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  .whatsapp-float:hover {
+    background-color: #1ebe5b;
+    transform: scale(1.1);
+  }
+</style>
+
+
 
                     <!-- Contact Information -->
                     <div class="contact-info-section animate-fade-in">
