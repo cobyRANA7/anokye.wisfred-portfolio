@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/config.php';
+require_once __DIR__ . 'config.php';
 
 // =============================
 // CONTACT FORM MAIL HANDLER
@@ -9,10 +9,10 @@ require_once __DIR__ . '/config.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require __DIR__ . '/PHPMailer/src/Exception.php';
-require __DIR__ . '/PHPMailer/src/PHPMailer.php';
-require __DIR__ . '/PHPMailer/src/SMTP.php';
-require __DIR__ . '/config.php'; // Your secure credentials
+require __DIR__ . '\PHPMailer\PHPMailer\src\Exception.php';
+require __DIR__ . '\PHPMailer\PHPMailer\src\PHPMailer.php';
+require __DIR__ . '\PHPMailer\PHPMailer\src\SMTP.php';
+require __DIR__ . 'config.php'; // Your secure credentials
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
