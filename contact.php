@@ -2,6 +2,7 @@
 // ===============================
 // CONFIGURATION SECTION
 // ===============================
+require 'config.php';
 
 // Load PHPMailer files
 require __DIR__ . '/PHPMailer/src/Exception.php';
@@ -111,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h2 class="form-title">Send us a Message</h2>
                     <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
                     
-                    <form method="POST" class="contact-form" action="contact.html">
+                    <form method="POST" class="contact-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">First Name *</label>

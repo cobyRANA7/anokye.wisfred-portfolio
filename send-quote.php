@@ -1,4 +1,5 @@
 <?php
+require 'config.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -112,11 +113,11 @@ try {
       <strong>Wisfrd's Building Consult</strong><br>
       📞 $COMPANY_PHONE<br>
       ✉️ <a href='mailto:anokye.wisfred22@gmail.com' style='color:{$PRIMARY_COLOR};'>anokye.wisfred22@gmail.com</a><br>
-      🌐 <a href='$COMPANY_WEBSITE' style='color:{$PRIMARY_COLOR};'>https://cobyrana7.github.io/anokye.wisfred-portfolio/</a></p>
+      🌐 <a href='https://cobyrana7.github.io/anokye.wisfred-portfolio/' style='color:{$PRIMARY_COLOR};'>https://cobyrana7.github.io/anokye.wisfred-portfolio/</a></p>
     </div>
 
     <div style='background-color:#f5f5f5; text-align:center; padding:15px; font-size:13px; color:#666;'>
-      &copy; " . date('Y') . " $COMPANY_NAME. All rights reserved.
+      &copy; " . date('Y') . "Wisfred's Buulding Cnsult. All rights reserved.
     </div>
   </div>
   ";
