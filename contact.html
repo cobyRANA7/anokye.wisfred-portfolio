@@ -28,8 +28,8 @@
                     <a href="about.html" class="nav-link">About</a>
                     <a href="services.html" class="nav-link">Services</a>
                     <a href="portfolio.html" class="nav-link">Portfolio</a>
-                    <a href="contact.html" class="nav-link active">Contact</a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">Get Quote</a>
+                    <a href="contact.php" class="nav-link active">Contact</a>
+                    <a href="contact.php" class="btn btn-primary btn-sm">Get Quote</a>
                 </div>
 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -73,29 +73,63 @@
                             Fill out the form below and we'll get back to you within 24 hours.
                         </p>
                         
-                       <form action="send-quote.php" method="POST">
-                          <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">First Name *</label>
-                                    <input type="text" id="firstName" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Last Name *</label>
-                                    <input type="text" id="lastName" name="lastName" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone">
-                                </div>
-                            </div>
-                        </form>
+                       <form action="contact.php" method="POST" class="contact-form">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="projectType">Project Type</label>
+        <select id="projectType" name="projectType">
+            <option value="">Select a project type</option>
+            <option value="residential">Residential</option>
+            <option value="commercial">Commercial</option>
+            <option value="industrial">Industrial</option>
+            <option value="renovation">Renovation</option>
+            <option value="consultation">Consultation</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="budget">Budget Range</label>
+        <select id="budget" name="budget">
+            <option value="">Select a budget range (Dollars & Cedis)</option>
+            <option value="under-100k">Under $100K</option>
+            <option value="100k-500k">$100K - $500K</option>
+            <option value="500k-1m">$500K - $1M</option>
+            <option value="1m-5m">$1M - $5M</option>
+            <option value="over-5m">Over $5M</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Project Description *</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Please describe your project, timeline, and any specific requirements..."></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary btn-lg">
+        Send Message <i data-lucide="send"></i>
+    </button>
+</form>
 
                             
                             <div class="form-group">
