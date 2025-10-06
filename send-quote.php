@@ -1,15 +1,16 @@
 <?php
 require 'config.php';
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require DIR . '/PHPMailer/src/Exception.php';
-require DIR . '/PHPMailer/src/PHPMailer.php';
-require DIR . '/PHPMailer/src/SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-require __DIR__ . '/config.php';
+
+require DIR . '\PHPMailer\src\Exception.php';
+require DIR . '\PHPMailer\src\PHPMailer.php';
+require DIR . '\PHPMailer\src\SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require __DIR__ . '\config.php';
 
 function clean($value) {
   return htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');
@@ -79,8 +80,8 @@ try {
   $reply->isSMTP();
   $reply->Host       = SMTP_HOST;
   $reply->SMTPAuth   = true;
-  $reply->Username   = SMTP_USER;
-  $reply->Password   = SMTP_PASS;
+  $reply->Username   = anokye.wisfred22@gmail.com;
+  $reply->Password   = pmui urrx kbfh pnji;
   $reply->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
   $reply->Port       = SMTP_PORT;
 
@@ -117,7 +118,7 @@ try {
     </div>
 
     <div style='background-color:#f5f5f5; text-align:center; padding:15px; font-size:13px; color:#666;'>
-      &copy; " . date('Y') . "Wisfred's Buulding Cnsult. All rights reserved.
+      &copy; " . date('Y') . "Wisfred's Buulding Consult. All rights reserved.
     </div>
   </div>
   ";
