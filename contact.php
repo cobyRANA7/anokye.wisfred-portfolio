@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h2 class="form-title">Send us a Message</h2>
                     <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
                     
-                    <form method="POST" class="contact-form">
+                    <form method="POST" class="contact-form" action="send-quote.php">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">First Name *</label>
