@@ -73,29 +73,31 @@
                             Fill out the form below and we'll get back to you within 24 hours.
                         </p>
                         
-                        <form class="contact-form" id="contactForm" action="send-quote.php" method="POST">
->
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">First Name *</label>
-                                    <input type="text" id="firstName" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Last Name *</label>
-                                    <input type="text" id="lastName" name="lastName" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone">
-                                </div>
-                            </div>
+                       <form action="send-quote.php" method="POST">
+  <label>First Name:</label>
+  <input type="text" name="firstName" required>
+
+  <label>Last Name:</label>
+  <input type="text" name="lastName" required>
+
+  <label>Email:</label>
+  <input type="email" name="email" required>
+
+  <label>Phone:</label>
+  <input type="text" name="phone">
+
+  <label>Project Type:</label>
+  <input type="text" name="projectType">
+
+  <label>Budget:</label>
+  <input type="text" name="budget">
+
+  <label>Message:</label>
+  <textarea name="message" required></textarea>
+
+  <button type="submit">Send Quote</button>
+</form>
+
                             
                             <div class="form-group">
                                 <label for="projectType">Project Type</label>

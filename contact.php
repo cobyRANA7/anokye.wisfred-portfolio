@@ -12,7 +12,7 @@ use PHPMailer\PHPMailer\Exception;
 
 // Define your Gmail credentials
 $gmail_user = 'anokye.wisfred22@gmail.com';        // 🔸 Replace with your Gmail
-$gmail_pass = 'mfqrgddkwbldrkhi';          // 🔸 Replace with Gmail App Password
+$gmail_pass = 'pmui urrx kbfh pnji';          // 🔸 Replace with Gmail App Password
 
 // ===============================
 // FORM HANDLING SECTION
@@ -46,8 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = $gmail_user;
-        $mail->Password   = $gmail_pass;
+        $mail->Username   = 'anokye.wisfred22@gmail.com';
+        $mail->Password   = 'pmui urrx kbfh pnji';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 

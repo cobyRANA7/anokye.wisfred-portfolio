@@ -49,13 +49,13 @@ try {
   $mail->isSMTP();
   $mail->Host       = SMTP_HOST;
   $mail->SMTPAuth   = true;
-  $mail->Username   = SMTP_USER;
-  $mail->Password   = SMTP_PASS;
+  $mail->Username   = 'anokye.wisfred22@gmail.com';
+  $mail->Password   = 'pmui urrx kbfh pnji';
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
   $mail->Port       = SMTP_PORT;
 
   $mail->setFrom(FROM_EMAIL, FROM_NAME);
-  $mail->addAddress(ADMIN_EMAIL);
+  $mail->addAddress('anokye.wisfred22@gmail.com');
   $mail->addReplyTo($email, "$firstName $lastName");
 
   $mail->isHTML(true);
@@ -83,21 +83,21 @@ try {
   $reply->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
   $reply->Port       = SMTP_PORT;
 
-  $reply->setFrom(FROM_EMAIL, $COMPANY_NAME);
+  $reply->setFrom(FROM_EMAIL, Wisfred’s Building Consult);
   $reply->addAddress($email, "$firstName $lastName");
   $reply->isHTML(true);
-  $reply->Subject = "Thank You for Contacting $COMPANY_NAME";
+  $reply->Subject = "Thank You for Contacting Wisfred's Building Consultancy";
 
   $reply->Body = "
   <div style='font-family: Poppins, Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #eaeaea; border-radius: 10px; overflow: hidden;'>
     <div style='background-color: {$PRIMARY_COLOR}; color: white; text-align: center; padding: 30px;'>
       " . ($LOGO_URL ? "<img src='{$LOGO_URL}' alt='Wisfred Logo' style='max-height:60px; margin-bottom:10px;'>" : "") . "
-      <h2 style='margin:0;'>$COMPANY_NAME</h2>
+      <h2 style='margin:0;'>Wisfred's Building Consult</h2>
     </div>
 
     <div style='padding: 25px; color: #333; background: #fff;'>
       <p>Dear <strong>{$firstName}</strong>,</p>
-      <p>Thank you for reaching out to <strong>$COMPANY_NAME</strong>. We’ve received your request and our team will contact you shortly to discuss your project.</p>
+      <p>Thank you for reaching out to <strong>Wisfred's Building Consult</strong>. We’ve received your request and our team will contact you shortly to discuss your project.</p>
       
       <h3 style='color: {$PRIMARY_COLOR}; margin-top: 25px;'>Your Message Summary</h3>
       <table style='width: 100%; border-collapse: collapse;'>
@@ -109,10 +109,10 @@ try {
 
       <p style='margin-top:25px;'>If you have any further details to share, feel free to reply to this email.</p>
       <p style='margin-top:15px;'>Warm regards,<br>
-      <strong>$COMPANY_NAME</strong><br>
+      <strong>Wisfrd's Building Consult</strong><br>
       📞 $COMPANY_PHONE<br>
-      ✉️ <a href='mailto:$COMPANY_EMAIL' style='color:{$PRIMARY_COLOR};'>$COMPANY_EMAIL</a><br>
-      🌐 <a href='$COMPANY_WEBSITE' style='color:{$PRIMARY_COLOR};'>$COMPANY_WEBSITE</a></p>
+      ✉️ <a href='mailto:anokye.wisfred22@gmail.com' style='color:{$PRIMARY_COLOR};'>anokye.wisfred22@gmail.com</a><br>
+      🌐 <a href='$COMPANY_WEBSITE' style='color:{$PRIMARY_COLOR};'>https://cobyrana7.github.io/anokye.wisfred-portfolio/</a></p>
     </div>
 
     <div style='background-color:#f5f5f5; text-align:center; padding:15px; font-size:13px; color:#666;'>
