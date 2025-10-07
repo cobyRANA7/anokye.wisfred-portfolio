@@ -132,6 +132,16 @@
   <button type="submit" class="btn btn-primary btn-lg">
     Send Message <i data-lucide="send"></i>
   </button>
+  <button type="submit" class="btn btn-primary btn-lg">
+  Send Message <i data-lucide="send"></i>
+</button>
+<!-- Email Button -->
+<a href="mailto:anokye.wisfred22@gmail.com?subject=Project%20Inquiry&body=Hello%20Wisfred,%0AI%20would%20like%20to%20discuss%20a%20project..."
+   class="btn btn-email btn-lg"
+   style="display:inline-flex;align-items:center;gap:0.5rem;background-color:#0072c6;color:white;border:none;padding:0.75rem 1.25rem;border-radius:8px;font-weight:600;text-decoration:none;margin-top:1rem;">
+   <i data-lucide="mail"></i> Send via Email
+</a>
+
 
   <p id="response-message" style="margin-top:1rem; font-weight:600;"></p>
 </form>
@@ -144,6 +154,14 @@
    title="Chat on WhatsApp">
    <i data-lucide="message-circle"></i>
 </a>
+<!-- Floating Email Button -->
+<a href="mailto:anokye.wisfred22@gmail.com?subject=Project%20Inquiry&body=Hello%20Wisfred,%0AI%20would%20like%20to%20discuss%20a%20project..."
+   class="email-float"
+   target="_blank"
+   title="Send Email">
+   <i data-lucide="mail"></i>
+</a>
+
 
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
@@ -174,6 +192,31 @@
     background-color: #1ebe5b;
     transform: scale(1.1);
   }
+
+  /* Floating Email Button */
+.email-float {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  background-color: #0072c6;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+.email-float:hover {
+  background-color: #005ea6;
+  transform: scale(1.1);
+}
+
 </style>
 
 
